@@ -1,7 +1,12 @@
 import { observable, computed, action } from "mobx"
 
 class BoardStore {
-    @observable board = []
+    @observable board = [
+        { title: "teste 1", text: "..." },
+        { title: "teste 2", text: "..." },
+        { title: "teste 3", text: "..." },
+        { title: "teste 4", text: "..." }
+    ]
 
     @action
     add(idea) {
