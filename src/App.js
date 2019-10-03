@@ -1,11 +1,14 @@
 import React from 'react'
+import HeaderApp from './components/Header'
+import MainApp from './components/Main'
 
-function App() {
-  return (
-    <div className="app">
-
-    </div>
-  )
-}
+const App = () => (
+	<div className="app">
+		<HeaderApp />
+		<MainApp>
+			
+		</MainApp>
+	</div>
+)
 
 export default App

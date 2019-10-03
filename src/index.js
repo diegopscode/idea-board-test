@@ -2,9 +2,21 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './assets/scss/index.scss'
 import App from './App'
+import { Provider } from 'mobx-react'
 // import * as serviceWorker from './serviceWorker'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+// # Mobx Stores
+import BoardStore from './store/BoardStore'
+
+const AppContent = (
+    <Provider
+        BoardStore={BoardStore}
+    >
+        <App />
+    </Provider>
+)
+
+ReactDOM.render(AppContent, document.getElementById('root'))
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
