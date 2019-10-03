@@ -1,0 +1,12 @@
+.idea-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin: 0 -5px;
+
+    .idea-item {
+       width: 25%;
+       padding: 5px;
+    }
+}

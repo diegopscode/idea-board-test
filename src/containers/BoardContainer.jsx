@@ -7,7 +7,9 @@ class BoardContainer extends Component {
     render() {
         return (
             <div className="board-container">
-                <IdeaContainer />
+                <div className="container">
+                    <IdeaContainer />
+                </div>
             </div>
         )
     }

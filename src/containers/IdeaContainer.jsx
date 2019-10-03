@@ -11,7 +11,11 @@ class IdeaContainer extends Component {
     }
 
     renderList = (items) => {
-        return items.map(item => <Card {...item} />)
+        return items.map(item => (
+            <div className="idea-item">
+                <Card {...item} />
+            </div>
+        ))
     }
 
     render() {
@@ -20,7 +24,9 @@ class IdeaContainer extends Component {
 
         return (
             <div className="idea-container">
-                {this.renderList(board)}
+                <div className="idea-list">
+                    {this.renderList(board)}
+                </div>
             </div>
         )
     }

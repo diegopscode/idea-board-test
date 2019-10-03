@@ -5,7 +5,11 @@ class BoardStore {
         { title: "teste 1", text: "..." },
         { title: "teste 2", text: "..." },
         { title: "teste 3", text: "..." },
-        { title: "teste 4", text: "..." }
+        { title: "teste 4", text: "..." },
+        { title: "teste 5", text: "..." },
+        { title: "teste 6", text: "..." },
+        { title: "teste 7", text: "..." },
+        { title: "teste 8", text: "..." },
     ]
 
     @action

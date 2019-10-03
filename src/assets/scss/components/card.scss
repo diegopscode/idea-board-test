@@ -1,0 +1,30 @@
+.card {
+    background-color: $second-color;
+
+    border: #999;
+    border-radius: 3px;
+
+    .card-content {
+        padding: 20px;
+    }
+
+    .card-title, .card-text {
+        margin-bottom: 20px;
+        color: $primary-color;
+        font-size: 1em;
+    }
+
+    .card-title, .card-title .card-input {
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    .card-input {
+        border: 1px solid #333;
+        outline: none;
+        background-color: transparent;
+        -webkit-appearance: none;
+
+        width: 100%;
+    }
+}
