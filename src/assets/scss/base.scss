@@ -13,3 +13,23 @@
     text-align: center;
     text-transform: uppercase;
 }
+
+button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    -webkit-appearance: none;
+
+    padding: 7px 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+
+    background-color: $blue;
+    color: $white;
+
+    transition: background-color .18s ease-in-out;
+
+    &:hover {
+        background-color: $blue-dark;
+    }
+}
