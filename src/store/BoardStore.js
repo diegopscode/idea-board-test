@@ -1,26 +1,37 @@
 import { observable, computed, action } from "mobx"
 
 class BoardStore {
-    @observable board = [
-        { title: "teste 1", text: "..." },
-        { title: "teste 2", text: "..." },
-        { title: "teste 3", text: "..." },
-        { title: "teste 4", text: "..." },
-        { title: "teste 5", text: "..." },
-        { title: "teste 6", text: "..." },
-        { title: "teste 7", text: "..." },
-        { title: "teste 8", text: "..." },
-    ]
+    @observable board = []
 
-    @action
-    add(idea) {
-        this.board.push(idea)
+    newIdea = {
+        title: '',
+        text: '',
+        autoFocus: true
     }
 
     @action
-    remmove(idea) {
-        let index = this.board.findIndex(item => item.id === idea)
-        if(index) this.board.slice(index, 1)
+    add() {
+        this.board.push(this.newIdea)
+    }
+
+    @action
+    update(input, indexIdea) {
+        this.board[indexIdea][input.name] = input.value
+    }
+
+    @action
+    remove(indexIdea) {
+        this.board.splice(indexIdea, 1)
+    }
+
+    @action
+    loadStorage() {
+        this.board = JSON.parse(window.localStorage.getItem("USER_BOARDS"))
+    }
+
+    @action
+    saveStorage() {
+        window.localStorage.setItem("USER_BOARDS", JSON.stringify(this.board))
     }
     
     @computed 
