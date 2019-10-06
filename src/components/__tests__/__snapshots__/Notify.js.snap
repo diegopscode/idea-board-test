@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotifyComponent snapshot renders notify component 1`] = `
+<div
+  className="notify"
+>
+  <div
+    className="notify-alert"
+  >
+    All changed saved!
+  </div>
+</div>
+`;

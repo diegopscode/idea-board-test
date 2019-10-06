@@ -5,7 +5,7 @@ import Notify from '../Notify'
 
 describe("NotifyComponent", () => {
     test('snapshot renders notify component', () => {
-        const component = renderer.create(<Notify />)
+        const component = renderer.create(<Notify show={true} />)
         let notify = component.toJSON()
         expect(notify).toMatchSnapshot()
     })
