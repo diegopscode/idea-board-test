@@ -18,11 +18,12 @@ class BoardContainer extends Component {
                 <div className="container">
                     <div className="board-filter">
                         <button className="button" onClick={this.onAddIdea}>New Idea</button>
-                        <Notify show={notify} />
                     </div>
 
                     <IdeaContainer />
                 </div>
+
+                <Notify show={notify} />
             </div>
         )
     }

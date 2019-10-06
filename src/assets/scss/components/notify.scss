@@ -1,14 +1,15 @@
 .notify {
-    position: absolute;
-    top: 0;
+    position: fixed;
+    top: 20px;
     right: 20px;
 
     .notify-alert {
-        animation: fade 1s;
-        padding: 10px;
+        animation: fade .6s;
+        padding: 10px 15px;
 
         font-size: 1em;
         font-weight: bold;
+        text-transform: uppercase;
 
         background-color: $green;
     }

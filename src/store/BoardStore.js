@@ -20,6 +20,7 @@ class BoardStore {
     @action
     update(input, indexIdea) {
         this.board[indexIdea][input.name] = input.value
+        this.board[indexIdea].autoFocus = false
     }
 
     @action
@@ -46,7 +47,7 @@ class BoardStore {
 
         this.timeoutControl = setTimeout(() => {
             this.notify = false
-        }, 2000)
+        }, 3000)
     }
     
     @computed 
