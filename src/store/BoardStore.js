@@ -1,7 +1,13 @@
 import { observable, computed, action } from "mobx"
 
 class BoardStore {
-    @observable board = []
+    @observable board = [
+        {
+            title: 'First idea',
+            text: 'Develop an idea board.',
+            autoFocus: false
+        }
+    ]
     @observable notify = false
 
     newIdea = {
@@ -31,7 +37,9 @@ class BoardStore {
 
     @action
     loadStorage() {
-        this.board = JSON.parse(window.localStorage.getItem("USER_BOARDS"))
+        let board = JSON.parse(window.localStorage.getItem("USER_BOARDS"))
+
+        if(board.length) this.board = board
     }
 
     @action
