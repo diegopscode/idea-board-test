@@ -1,0 +1,24 @@
+.notify {
+    position: absolute;
+    top: 0;
+    right: 20px;
+
+    .notify-alert {
+        animation: fade 1s;
+        padding: 10px;
+
+        font-size: 1em;
+        font-weight: bold;
+
+        background-color: $green;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -14,7 +14,7 @@ const Card = ({ index, title, text, autoFocus, onRemove, onChange, onBlur }) => 
                 <textarea type="text" name="text" rows="8" className="card-input" value={text} onChange={e => onChange(e.target, index)} onBlur={onBlur} />
             </div>
         </div>
-        <a className="card-button-close" onClick={() => onRemove(index)}>X</a>
+        <a className="card-button-close" onClick={() => onRemove(index)}>&times;</a>
     </div>
 )
 

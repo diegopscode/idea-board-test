@@ -27,6 +27,7 @@
         -webkit-appearance: none;
 
         width: 100%;
+        font-size: 1em;
     }
 
     textarea.card-input {
@@ -37,12 +38,21 @@
 
     .card-button-close {
         cursor: pointer;
-        padding: 5px;
         position: absolute;
 
         top: 0;
-        right: 0;
+        right: 3px;
 
         color: red;
+        font-size: 24px;
+        line-height: 24px;
+
+        display: none;
+    }
+
+    &:hover {
+        .card-button-close {
+            display: block;
+        }
     }
 }

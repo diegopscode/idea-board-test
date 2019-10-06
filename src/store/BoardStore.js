@@ -2,12 +2,15 @@ import { observable, computed, action } from "mobx"
 
 class BoardStore {
     @observable board = []
+    @observable notify = false
 
     newIdea = {
         title: '',
         text: '',
         autoFocus: true
     }
+
+    timeoutControl = {}
 
     @action
     add() {
@@ -22,6 +25,7 @@ class BoardStore {
     @action
     remove(indexIdea) {
         this.board.splice(indexIdea, 1)
+        this.saveStorage()
     }
 
     @action
@@ -32,6 +36,17 @@ class BoardStore {
     @action
     saveStorage() {
         window.localStorage.setItem("USER_BOARDS", JSON.stringify(this.board))
+        this.showNotify()
+    }
+
+    @action
+    showNotify() {
+        this.notify = true
+        clearTimeout(this.timeoutControl)
+
+        this.timeoutControl = setTimeout(() => {
+            this.notify = false
+        }, 2000)
     }
     
     @computed 
