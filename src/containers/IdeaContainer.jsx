@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { inject, observer } from "mobx-react"
 
-import Card from '@/components/Card'
+import Card from '../components/Card'
 
 @inject("BoardStore")
 @observer

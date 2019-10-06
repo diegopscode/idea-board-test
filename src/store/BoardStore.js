@@ -37,9 +37,11 @@ class BoardStore {
 
     @action
     loadStorage() {
-        let board = JSON.parse(window.localStorage.getItem("USER_BOARDS"))
+        let board = JSON.parse(window.localStorage.getItem("USER_BOARDS")) || []
 
         if(board.length) this.board = board
+
+        return board
     }
 
     @action
@@ -64,4 +66,4 @@ class BoardStore {
     }
 }
 
-export default new BoardStore()
+export default BoardStore

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainComponent snapshot renders main component 1`] = `
+<main
+  className="app-main"
+/>
+`;

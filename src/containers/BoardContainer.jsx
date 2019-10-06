@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { inject, observer } from "mobx-react"
 
 import IdeaContainer from './IdeaContainer'
-import Notify from '@/components/Notify'
+import Notify from '../components/Notify'
 
 @inject("BoardStore")
 @observer

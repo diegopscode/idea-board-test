@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardComponent snapshot renders card component 1`] = `
+<div
+  className="card card-idea"
+>
+  <div
+    className="card-content"
+  >
+    <div
+      className="card-title"
+    >
+      <input
+        className="card-input"
+        name="title"
+        onChange={[Function]}
+        placeholder="Enter a title"
+        type="text"
+        value="Teste"
+      />
+    </div>
+    <div
+      className="card-text"
+    >
+      <textarea
+        className="card-input"
+        name="text"
+        onChange={[Function]}
+        placeholder="Describe your idea"
+        rows="8"
+        type="text"
+        value="..."
+      />
+    </div>
+  </div>
+  <a
+    className="card-button-close"
+    onClick={[Function]}
+  >
+    ×
+  </a>
+</div>
+`;
